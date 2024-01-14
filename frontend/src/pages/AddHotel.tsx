@@ -33,7 +33,7 @@ const AddHotel = () => {
           pricePerNight: 0,
           starRating: 0,
           imageUrls: [],
-          lastUpdated: '',
+          lastUpdated: new Date(),
       }}/>
   )
 
