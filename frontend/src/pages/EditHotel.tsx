@@ -31,6 +31,3 @@ function EditHotel() {
 
 export default EditHotel;
 
-function showToast(arg0: { message: string; type: string; }) {
-  throw new Error("Function not implemented.");
-}
