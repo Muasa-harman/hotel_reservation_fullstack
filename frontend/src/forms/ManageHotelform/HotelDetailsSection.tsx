@@ -43,7 +43,7 @@ const HotelDetailsSection = () => {
             <option value="" className="testarRatingt-sm font-bold">
                 Rating
             </option>
-            {[1,2,3,4,5].map((num)=>(<option value={num}>{num}</option>))}
+            {[1,2,3,4,5].map((num,index)=>(<option key={index} value={num}>{num}</option>))}
         </select>
         {errors.starRating && (
         <span className="text-red-500">{errors.starRating?.message}</span>
