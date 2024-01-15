@@ -8,9 +8,18 @@ export type HotelType = {
     type: string;
     adultCount: number;
     childCount: number;
-    facilities: string;
+    facilities: string[];
     pricePerNight: number;
     starRating: number;
     imageUrls: string[]
     lastUpdated: Date;
+};
+
+export type HotelSearchResponse = {
+    data: HotelType[];
+    pagination: {
+        total: number;
+        page: number;
+        pages: number;
+    }
 }
