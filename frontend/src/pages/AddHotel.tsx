@@ -19,22 +19,7 @@ const AddHotel = () => {
         mutate(hotelFormData);
     };
   return (
-    <ManageHotelForm onSave={handleSave} isLoading={isLoading} hotel={{
-          _id: "",
-          userId: "",
-          name: "",
-          city: "",
-          country: "",
-          description: "",
-          type: "",
-          adultCount: 0,
-          childCount: 0,
-          facilities: "",
-          pricePerNight: 0,
-          starRating: 0,
-          imageUrls: [],
-          lastUpdated: new Date(),
-      }}/>
+    <ManageHotelForm onSave={handleSave} isLoading={isLoading} />
   )
 
   }

@@ -34,7 +34,4 @@ function App() {
 }
 
 export default App;
-export function searchHotels(search: { destination: string; checkIn: Date; checkOut: Date; adultCount: number; childCount: number; hotelId: string; saveSearchValues: (destination: string, checkIn: Date, checkOut: Date, adultCount: number, childCount: number) => void; }): any {
-  throw new Error("Function not implemented.");
-}
 
