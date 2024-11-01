@@ -31,3 +31,17 @@ export type UserType = {
     firstName: string;
     lastName: string;
 };
+
+export type SearchParams = {
+    destination?: string;
+    checkIn?: string;
+    checkOut?: string;
+    adultCount?: string;
+    childCount?: string;
+    page?: string;
+    facilities?: string[];
+    stars?: string[];
+    types?: string[];
+    maxPrice?: string;
+    sortOptions?: string;
+};

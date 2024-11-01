@@ -18,7 +18,7 @@ const Header = () => {
           </> : 
           <Link
             to="/sign-in"
-            className="flex bg-white items-center text-gray-500 px-3 font-bold hover:bg-gray-100"
+            className="flex bg-orange-400 items-center text-white px-3 font-bold hover:bg-gray-100"
           >
             Sign In
           </Link>
