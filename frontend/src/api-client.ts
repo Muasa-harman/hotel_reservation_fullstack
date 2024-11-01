@@ -9,6 +9,20 @@ import {
 
 
 
+
+export const searchHotels = async (params: SearchParamsType): Promise<HotelSearchResponse> => {
+    const response = await apiFetch<HotelSearchResponse>(`${API_BASE_URL}/api/hotels/search`, {
+        method: "GET",
+        body: JSON.stringify(params),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
+
+    return response; // Ensure this is returning a HotelSearchResponse object
+};
+
+
 // Generic API Fetch Function
 async function apiFetch<T>(url: string, options?: RequestInit): Promise<T> {
     const response = await fetch(url, options);
@@ -136,18 +150,18 @@ export const fetchHotelById = async (hotelId: string): Promise<HotelType> => {
   return apiFetch<HotelType>(`${API_BASE_URL}/api/hotels/${hotelId}`);
 };
 
-export const searchHotels = async (params: SearchParamsType): Promise<HotelSearchResponse[]> => {
-    const response = await apiFetch<HotelSearchResponse[]>(`${API_BASE_URL}/api/hotels/search`, {
-        method: "GET",
-        body: JSON.stringify(params),
-        headers: {
-            "Content-Type": "application/json",
-        },
-    });
+// export const searchHotels = async (params: SearchParamsType): Promise<HotelSearchResponse[]> => {
+//     const response = await apiFetch<HotelSearchResponse[]>(`${API_BASE_URL}/api/hotels/search`, {
+//         method: "GET",
+//         body: JSON.stringify(params),
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//     });
 
-    // Assuming each HotelSearchResponse can be transformed into a HotelType
-    return response
-};
+//     // Assuming each HotelSearchResponse can be transformed into a HotelType
+//     return response
+// };
 
 
 // // Example of defining searchHotels in apiClient

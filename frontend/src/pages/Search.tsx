@@ -1,3 +1,5 @@
+
+
 import { useQuery } from "react-query";
 import { useSearchContext } from "../context/SearchContext";
 import * as apiClient from "../api-client";
@@ -8,6 +10,7 @@ import StarRatingFilter from "../components/StarRatingFilter";
 import HotelTypesFilter from "../components/HotelTypesFilter";
 import FacilitiesFilter from "../components/FacilitiesFilter";
 import PriceFilter from "../components/PriceFilter";
+import { HotelSearchResponse } from '../../../backend/src/shared/types';
 
 function Search() {
   const search = useSearchContext();
@@ -67,6 +70,7 @@ function Search() {
     );
   };
   console.log(sortOption)
+  
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-5">
       <div className="rounded-lg border border-slate-300 p-5 h-fit sticky top-10">
