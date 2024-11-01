@@ -9,6 +9,7 @@ import EditHotel from './pages/EditHotel';
 import Search from './pages/Search';
 import Detail from './pages/Detail';
 import Booking from './pages/Booking';
+import HotelSearch from './pages/HotelSearch';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
     // <BrowserRouter>
     <Router> 
     <Routes>
-      <Route path='/' element={<Layout><p>Home Page</p></Layout>}/>
+      <Route path='/' element={<Layout><HotelSearch/></Layout>}/>
       <Route path='/search' element={<Layout><Search/></Layout>}/>
       <Route path='/detail/:hotelId' element={<Layout><Detail/></Layout>}/>
       <Route path='/register' element={<Layout><Register/></Layout>}/>

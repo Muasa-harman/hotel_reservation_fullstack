@@ -32,8 +32,8 @@ const Booking = () => {
     apiClient.fetchCurrentUser
   );
   if(!hotel){
-    return
-    <p>Loading...</p>;
+    return(
+     <p>Loading...</p>)
   }
   return (
     <div className="grid md:grid-cols-[1fr_2fr]">
