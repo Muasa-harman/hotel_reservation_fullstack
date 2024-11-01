@@ -101,6 +101,7 @@ export const validateToken = async (): Promise<UserType> => {
   
 // };
 
+
 // Sign out
 export const signOut = async () => {
   return apiFetch<void>(`${API_BASE_URL}/api/auth/logout`, {
@@ -108,6 +109,7 @@ export const signOut = async () => {
     credentials: "include",
   });
 };
+
 
 // Add a new hotel
 export const addMyHotel = async (

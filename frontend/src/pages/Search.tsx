@@ -10,7 +10,7 @@ import StarRatingFilter from "../components/StarRatingFilter";
 import HotelTypesFilter from "../components/HotelTypesFilter";
 import FacilitiesFilter from "../components/FacilitiesFilter";
 import PriceFilter from "../components/PriceFilter";
-import { HotelSearchResponse } from '../../../backend/src/shared/types';
+// import { HotelSearchResponse } from '../../../backend/src/shared/types';
 
 function Search() {
   const search = useSearchContext();
