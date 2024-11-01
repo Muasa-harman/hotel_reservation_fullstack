@@ -32,7 +32,7 @@ export type UserType = {
     lastName: string;
 };
 
-export type SearchParams = {
+export type SearchParamsType = {
     destination?: string;
     checkIn?: string;
     checkOut?: string;

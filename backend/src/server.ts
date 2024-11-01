@@ -41,6 +41,11 @@ app.use(cors({
 // );
 
 app.use(express.static(path.join(__dirname, "../../frontend/dist")));
+app.use((req, res, next) => {
+  res.header("Content-Security-Policy", "script-src 'self' 'unsafe-inline' 'http://localhost:5173'");
+  next();
+});
+
 
 
 app.use("/api/auth", authRoutes);
