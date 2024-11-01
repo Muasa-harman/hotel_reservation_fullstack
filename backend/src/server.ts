@@ -4,12 +4,12 @@ import "dotenv/config";
 import mongoose from "mongoose";
 import userRoutes from "./routes/users";
 import authRoutes from "./routes/auth";
-import myHotelRoutes from "./routes/my-hotels"
-import hotelRoutes from "./routes/hotels"
+import myHotelRoutes from "./routes/my-hotels";
+import hotelRoutes from "./routes/hotels";
 import cookieParser from "cookie-parser";
 import path from "path";
-import {v2 as cloudinary} from 'cloudinary'
-// import * from "../../frontend/dist/"
+import {v2 as cloudinary} from 'cloudinary';
+
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -33,12 +33,7 @@ app.use(cors({
   origin: 'http://localhost:5173',  
   credentials: true,                 
 }));
-// app.use(
-//   cors({
-//     origin: process.env.FRONTEND_URL || 'http://localhost:5173',
-//     credentials: true,
-//   })
-// );
+
 
 app.use(express.static(path.join(__dirname, "../../frontend/dist")));
 app.use((req, res, next) => {
