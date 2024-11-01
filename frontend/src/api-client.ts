@@ -136,18 +136,32 @@ export const fetchHotelById = async (hotelId: string): Promise<HotelType> => {
   return apiFetch<HotelType>(`${API_BASE_URL}/api/hotels/${hotelId}`);
 };
 
-// Example of defining searchHotels in apiClient
-export const searchHotels = async (params: SearchParamsType): Promise<HotelType[]> => {
-    const response = await apiFetch<HotelType[]>(`${API_BASE_URL}/api/hotels/search`, {
-      method: "GET",
-      body: JSON.stringify(params),
-      headers: {
-        "Content-Type": "application/json",
-      },
+export const searchHotels = async (params: SearchParamsType): Promise<HotelSearchResponse[]> => {
+    const response = await apiFetch<HotelSearchResponse[]>(`${API_BASE_URL}/api/hotels/search`, {
+        method: "GET",
+        body: JSON.stringify(params),
+        headers: {
+            "Content-Type": "application/json",
+        },
     });
+
+    // Assuming each HotelSearchResponse can be transformed into a HotelType
+    return response
+};
+
+
+// // Example of defining searchHotels in apiClient
+// export const searchHotels = async (params: SearchParamsType): Promise<HotelType[]> => {
+//     const response = await apiFetch<HotelSearchResponse[]>(`${API_BASE_URL}/api/hotels/search`, {
+//       method: "GET",
+//       body: JSON.stringify(params),
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//     });
   
-    return response; // Assuming apiFetch handles the parsing
-  };
+//     return response; // Assuming apiFetch handles the parsing
+//   };
   
 
 // import { RegisterFormData } from "./pages/Register";
