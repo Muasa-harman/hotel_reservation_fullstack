@@ -21,7 +21,7 @@ import { useAppContext } from "../context/AppContext";
         console.log("signout")
     }
   return (
-    <button onClick={handleClick} className="text-gray-600 px-3 font-bold bg-white hover:bg-gray-100">SignOut</button>
+    <button onClick={handleClick} className="text-white px-3 font-bold bg-red-600 hover:bg-red-500">SignOut</button>
   );
 };
 
